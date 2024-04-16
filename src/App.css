@@ -15,13 +15,15 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  margin-bottom: 20px;
+  
 }
 
 .App-link {
@@ -36,3 +38,99 @@
     transform: rotate(360deg);
   }
 }
+
+body, html {
+  height: 100%; /* Ensure full height for vertical centering */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centers content vertically */
+  background-color: #f4f4f9; /* Light background for the page */
+}
+
+
+.calculator-container {
+  display: flex;
+  flex-direction: column; /* Stacks children vertically */
+  align-items: center; /* Centers children horizontally in the container */
+  justify-content: center; /* Centers children vertically in the container */
+  padding: 20px;
+  margin: auto;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: white;
+}
+
+
+.calculator-input {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 10px;
+  text-align: right;
+  font-size: 24px;
+  padding: 10px;
+}
+
+.calculator-button {
+  width: 48px; /* Minimum width for accessibility */
+  height: 48px; /* Matching height */
+  margin: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+}
+
+/* New styles specific for the Clear button */
+.clear-button {
+  width: 100px; /* Providing adequate width */
+  padding: 10px; /* Adding more padding */
+  background-color: #f0f0f0; /* Optional: different background to emphasize */
+}
+
+.calculator-button:hover, .calculator-button:focus, .clear-button:hover, .clear-button:focus {
+  background-color: #dedede; /* Light gray background on hover/focus */
+}
+
+.calculator-button:active {
+  background-color: #cacaca; /* Darker background when the button is pressed */
+}
+
+@media (max-width: 600px) {
+  .calculator-container {
+      width: 100%;
+      font-size: 16px; /* Smaller font size on smaller screens */
+  }
+
+  .calculator-button {
+      width: 60px; /* Larger buttons on small screens */
+      height: 60px;
+      font-size: 22px;
+  }
+
+  .calculator-input {
+      font-size: 28px; /* Larger input font for better readability */
+  }
+}
+
+.calculator-container.dark {
+  background-color: #333;
+  color: white;
+}
+
+.calculator-container.dark .calculator-button {
+  background-color: #555;
+}
+
+.calculator-container.dark .calculator-button:hover, .calculator-container.dark .calculator-button:focus {
+  background-color: #777;
+}
+
+.calculator-container.dark .calculator-button:active {
+  background-color: #999;
+}
+
+
